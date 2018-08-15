@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spend It!: @ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>@ViewBag.Title</h2>
+
+    <div class="expense-info">
+        <img src="~/img/ReceiptSwiss.jpg" />
+        <h3>Expense</h3>
+        <ul class="expense-props">
+            <li>Id: 32</li>
+            <li>From: Target</li>
+            <li>What: Household</li>
+            <li>Amount: $45.87</li>
+            <li>Date: 7/30/2018</li>
+            <li>Comment: School Supplies</li>
+        </ul>
+        <button id="editButton">Edit</button>
+    </div>
+
+
+    <div id="expenseForm">
+        <form>
+            <label>From:</label>
+            <br />
+            <input />
+            <br />
+            <label>What:</label>
+            <br />
+            <input />
+            <br />
+            <label>Amount:</label>
+            <br />
+            <input type="number" />
+            <br />
+            <label>Date:</label>
+            <br />
+            <input type="date" />
+            <br />
+            <label>Comment:</label>
+            <br />
+            <textarea rows="4"></textarea>
+            <br />
+            <input type="submit" value="Enter Expense" />
+
+        </form>
+    </div>
+
+    <div>
+        <div id="loginToggle">Login</div>
+        <form class="popup-form">
+            <div>
+                <label>Username</label>
+                <input />
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" />
+            </div>
+            <div>
+                <input type="checkbox" />
+                <label>Remember Me</label>
+            </div>
+            <div>
+                <input type="submit" value="Login" />
+            </div>
+
+        </form>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/index.js"></script>
+</body>
+</html>
