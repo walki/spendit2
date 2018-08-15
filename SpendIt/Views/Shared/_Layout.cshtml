@@ -11,7 +11,7 @@
         <menu>
             <ul>
                 <li><a asp-controller="App" asp-action="Index">Home</a></li>
-                <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
+                <li><a asp-controller="App" asp-action="Expense">Add Expense</a></li>
                 <li><a asp-controller="App" asp-action="About">About</a></li>
             </ul>
         </menu>
@@ -24,5 +24,6 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/index.js"></script>
+    @RenderSection("scripts", false)
 </body>
 </html>

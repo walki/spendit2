@@ -1,0 +1,42 @@
+﻿@model ExpenseViewModel
+@{
+    ViewBag.Title = "Log a Spend";
+}
+@section scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <label asp-for="From">From:</label>
+    <br />
+    <input asp-for="From" />
+    <span asp-validation-for="From"></span>
+    <br />
+
+    <label asp-for="What">What:</label>
+    <br />
+    <input asp-for="What" />
+    <span asp-validation-for="What"></span>
+    <br />
+
+    <label asp-for="Amount">Amount:</label>
+    <br />
+    <input asp-for="Amount" />
+    <span asp-validation-for="Amount"></span>
+    <br />
+
+    <label asp-for="Date">Date:</label>
+    <br />
+    <input type="date" asp-for="Date" />
+    <span asp-validation-for="Date"></span>
+    <br />
+
+    <label asp-for="Comment">Comment:</label>
+    <br />
+    <textarea rows="4" asp-for="Comment"></textarea>
+    <span asp-validation-for="Comment"></span>
+    <br />
+    <input type="submit" value="Enter Expense" />
+</form>

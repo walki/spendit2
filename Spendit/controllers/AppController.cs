@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SpendIt.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,25 @@ namespace SpendIt.Controllers
             return View();
         }
 
-        [HttpGet("contact")]
-        public IActionResult Contact()
+        [HttpGet("expense")]
+        public IActionResult Expense()
         {
-            ViewBag.Title = "Contact Us";
+            ViewBag.Title = "Add Expense";
 
-            throw new InvalidOperationException("Bad Mojo");
+            return View();
+        }
+
+        [HttpPost("expense")]
+        public IActionResult Expense(ExpenseViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Add the Expense
+            }
+            else
+            {
+                // Show Errors
+            }
 
             return View();
         }
