@@ -47,10 +47,10 @@ ul.expense-props {
         max-width: 150px;
     }
 
-    .expense-info img:hover 
-    {
-        border: 20px;
-    }
+        .expense-info img:hover {
+            border: 1px solid black;
+            max-width: 440px;
+        }
 
 #loginToggle {
     cursor: pointer;
@@ -73,4 +73,16 @@ ul.expense-props {
 
     .popup-form input[type=checkbox], .popup-form input[type=submit] {
         width: auto;
+    }
+
+menu li {
+    display: inline
+}
+
+    menu li:after {
+        content: " |"
+    }
+
+    menu li:last-of-type::after {
+        content: ""
     }
