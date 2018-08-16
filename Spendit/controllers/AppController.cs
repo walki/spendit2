@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SpendIt.Services;
 using SpendIt.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,16 @@ namespace SpendIt.Controllers
 {
     public class AppController : Controller
     {
+        private readonly IExpenseService expenseService;
+        private readonly IDateService dateService;
+
+        public AppController(IExpenseService expenseService, IDateService dateService)
+        {
+            this.expenseService = expenseService;
+            this.dateService = dateService;
+        }
+
+
         public IActionResult Index()
         {
             return View();
@@ -19,7 +30,7 @@ namespace SpendIt.Controllers
         public IActionResult Expense()
         {
             ViewBag.Title = "Add Expense";
-
+            ViewBag.DefaultDate = $"{dateService.GetToday():yyyy-MM-dd}";
             return View();
         }
 
@@ -29,10 +40,9 @@ namespace SpendIt.Controllers
             if (ModelState.IsValid)
             {
                 // Add the Expense
-            }
-            else
-            {
-                // Show Errors
+                expenseService.AddExpense(model.From, model.What, model.Amount, model.Date, model.Comment);
+                ViewBag.UserMessage = "Expense added.";
+                ModelState.Clear();
             }
 
             return View();

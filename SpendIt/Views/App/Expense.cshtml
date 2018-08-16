@@ -29,7 +29,7 @@
 
     <label asp-for="Date">Date:</label>
     <br />
-    <input type="date" asp-for="Date" />
+    <input type="date" asp-for="Date" value="@ViewBag.DefaultDate"/>
     <span asp-validation-for="Date"></span>
     <br />
 
@@ -39,4 +39,5 @@
     <span asp-validation-for="Comment"></span>
     <br />
     <input type="submit" value="Enter Expense" />
+    <div>@ViewBag.UserMessage</div>
 </form>
