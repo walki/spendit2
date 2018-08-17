@@ -1,4 +1,8 @@
-﻿body {
+﻿
+
+
+
+/*body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
@@ -38,21 +42,21 @@ ul.expense-props {
     width: 450px;
     background-color: lightgray;
     border-radius: 5px;
-}
+}*/
 
     .expense-info img {
-        margin: 5px;
+        /*margin: 5px;
         float: left;
-        border: 1px solid black;
+        border: 1px solid black;*/
         max-width: 150px;
     }
 
         .expense-info img:hover {
-            border: 1px solid black;
+            /*border: 1px solid black;*/
             max-width: 440px;
         }
 
-#loginToggle {
+/*#loginToggle {
     cursor: pointer;
 }
 
@@ -85,4 +89,4 @@ menu li {
 
     menu li:last-of-type::after {
         content: ""
-    }
+    }*/
